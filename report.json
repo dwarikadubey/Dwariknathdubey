@@ -1,0 +1,100 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "used-bike/car-models-in-chennai;print-upcoming-honda-bikes-under-₹4-lakhs-on-zigwheels",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Print upcoming Honda bikes under ₹4 Lakhs on ZigWheels",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 413535100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the ZigWheels homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I navigate to the Upcoming Honda bikes section",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I filter bikes under ₹4 Lakhs",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see a list of upcoming Honda bikes under ₹4 Lakhs",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I print each bike name and price to the console",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "If no bikes are found, I print a warning message",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155324399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "used-bike/car-models-in-chennai",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Used Bike/Car Models in Chennai",
+    "tags": [],
+    "uri": "tests\\usedPopularModels.feature"
+  }
+]

@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Run Cucumber tests for usedPopularModels.feature",
+			"command": "npx cucumber-js tests/usedPopularModels.feature",
+			"group": "test",
+			"problemMatcher": []
+		}
+	]
+}
