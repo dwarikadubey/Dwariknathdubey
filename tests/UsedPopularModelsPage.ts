@@ -29,33 +29,32 @@ export class UsedPopularModelsPage {
             console.log('⚠️ No models found.');
         }
     }
-
+    
     async gotoHome() {
         await this.page.goto('https://www.zigwheels.com/');
     }
-
+    
     async navigateToUpcomingHondaBikes() {
         await this.page.hover('a[title="New Bikes"]');
-        await this.page.click('//ul[@id="main-tabs"]/li[text()="Upcoming"]');
-        await this.page.locator('a[title="All Upcoming Bikes"]').click();
+        await this.page.click('a[title="Upcoming Bikes"]');
         await this.page.waitForSelector('input[placeholder="Search by Make or Model"]');
         await this.page.fill('input[placeholder="Search by Make or Model"]', 'Honda');
         await this.page.keyboard.press('Enter');
         await this.page.waitForSelector('h1:has-text("Upcoming Honda Bikes")');
     }
-
+    
     async filterBikesUnderFourLakhs() {
         // Adjust selector as per actual filter UI
         await this.page.click('label:has-text("Below 4 Lakh")');
         await this.page.waitForTimeout(2000); // Wait for filter to apply
     }
-
+    
     async getUpcomingHondaBikesAndPrices(): Promise<{ name: string, price: string }[]> {
         const names = await this.page.$$eval('.modelName', (els: Element[]) => els.map(el => el.textContent?.trim() || ''));
         const prices = await this.page.$$eval('.b.fnt-15', (els: Element[]) => els.map(el => el.textContent?.trim() || ''));
         return names.map((name, i) => ({ name, price: prices[i] || 'N/A' }));
     }
-
+    
     async printBikesAndPrices(bikes: { name: string, price: string }[]) {
         if (bikes.length > 0) {
             bikes.forEach((bike, i) => {
